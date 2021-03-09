@@ -14,11 +14,9 @@ function App() {
       if ((task.name === id) && (task.targetCategory === cat)) {
         task.category = cat;
         if (cat === "categoryA") {
-          categoryA = [...categoryA, task];
-          setCategoryA([...categoryA]);
+          setCategoryA([...categoryA, task]);
         } else if (cat === "categoryB") {
-          categoryB = [...categoryB, task];
-          setCategoryB([...categoryB]);
+          setCategoryB([...categoryB, task]);
         }
         setCommon([...common.filter(i => i.name !== id)]);
       }
