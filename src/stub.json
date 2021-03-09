@@ -1,0 +1,39 @@
+{
+  "data": [{
+      "name": "A1",
+      "category": "common",
+      "bgcolor": "yellow",
+      "targetCategory": "categoryA"
+    },
+    {
+      "name": "A2",
+      "category": "common",
+      "bgcolor": "yellow",
+      "targetCategory": "categoryA"
+    },
+    {
+      "name": "A3",
+      "category": "common",
+      "bgcolor": "yellow",
+      "targetCategory": "categoryA"
+    },
+    {
+      "name": "B1",
+      "category": "common",
+      "bgcolor": "yellow",
+      "targetCategory": "categoryB"
+    },
+    {
+      "name": "B2",
+      "category": "common",
+      "bgcolor": "yellow",
+      "targetCategory": "categoryB"
+    },
+    {
+      "name": "B3",
+      "category": "common",
+      "bgcolor": "yellow",
+      "targetCategory": "categoryB"
+    }
+  ]
+}
