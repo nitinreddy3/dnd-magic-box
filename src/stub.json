@@ -2,37 +2,37 @@
   "data": [{
       "name": "A1",
       "category": "common",
-      "bgcolor": "yellow",
+      "bgcolor": "rgb(233, 119, 12)",
       "targetCategory": "categoryA"
     },
     {
       "name": "A2",
       "category": "common",
-      "bgcolor": "yellow",
+      "bgcolor": "rgb(233, 119, 12)",
       "targetCategory": "categoryA"
     },
     {
       "name": "A3",
       "category": "common",
-      "bgcolor": "yellow",
+      "bgcolor": "rgb(233, 119, 12)",
       "targetCategory": "categoryA"
     },
     {
       "name": "B1",
       "category": "common",
-      "bgcolor": "yellow",
+      "bgcolor": "rgb(233, 119, 12)",
       "targetCategory": "categoryB"
     },
     {
       "name": "B2",
       "category": "common",
-      "bgcolor": "yellow",
+      "bgcolor": "rgb(233, 119, 12)",
       "targetCategory": "categoryB"
     },
     {
       "name": "B3",
       "category": "common",
-      "bgcolor": "yellow",
+      "bgcolor": "rgb(233, 119, 12)",
       "targetCategory": "categoryB"
     }
   ]
