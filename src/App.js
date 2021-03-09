@@ -55,7 +55,7 @@ function App() {
         onDragOver={(e) => onDragOver(e)}
         onDrop={(e) => onDrop(e, "common")}
       >
-        <span className="task-header">Common</span>
+        <span className="task-header">Common Category</span>
         {getCategorizedTasks(common)}
       </div>
       <div className="wrapper">
@@ -64,7 +64,7 @@ function App() {
           onDragOver={(e) => onDragOver(e)}
           onDrop={(e) => onDrop(e, "categoryA")}
         >
-          <span className="task-header">A</span>
+          <span className="task-header">Category A</span>
           {getCategorizedTasks(categoryA)}
         </div>
         <div
@@ -72,7 +72,7 @@ function App() {
           onDragOver={(e) => onDragOver(e)}
           onDrop={(e) => onDrop(e, "categoryB")}
         >
-          <span className="task-header">B</span>
+          <span className="task-header">Category B</span>
           {getCategorizedTasks(categoryB)}
         </div>
       </div>
