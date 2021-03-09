@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import json from './stub.json'
 
 function App() {
-  const [tasks, setTasks] = useState(json.data)
   let [categoryA, setCategoryA] = useState([])
   let [categoryB, setCategoryB] = useState([])
   let [common, setCommon] = useState(json.data)
-
-  useEffect(() => {
-    setTasks([...json.data])
-  }, [])
-
 
   const onDrop = (ev, cat) => {
     let id = ev.dataTransfer.getData("id");
