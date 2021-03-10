@@ -7,18 +7,33 @@ function App() {
   let [categoryB, setCategoryB] = useState([])
   let [common, setCommon] = useState(json.data)
 
-  const onDrop = (ev, cat) => {
-    let id = ev.dataTransfer.getData("id");
+  /**
+   *
+   * @param {*} category
+   * @param {*} task
+   * @param {*} id
+   */
+  const setStateForCategory = (category, task, id) => {
+    if (category === "categoryA") {
+      setCategoryA([...categoryA, task].sort());
+    } else if (category === "categoryB") {
+      setCategoryB([...categoryB, task].sort());
+    }
+    setCommon([...common.filter(i => i.name !== id)]);
+  }
 
+  /**
+   *
+   * @param {*} event
+   * @param {*} category
+   */
+  const onDrop = (event, category) => {
+    let id = event.dataTransfer.getData("id");
     common.forEach((task) => {
-      if ((task.name === id) && (task.targetCategory === cat)) {
-        task.category = cat;
-        if (cat === "categoryA") {
-          setCategoryA([...categoryA, task]);
-        } else if (cat === "categoryB") {
-          setCategoryB([...categoryB, task]);
-        }
-        setCommon([...common.filter(i => i.name !== id)]);
+      const { name, targetCategory } = task;
+      if ((name === id) && (targetCategory === category)) {
+        task = { ...task, category };
+        setStateForCategory(task.targetCategory, task, id)
       }
     });
   };
@@ -37,9 +52,30 @@ function App() {
     draggable
     className="draggable"
     style={{ backgroundColor: t.bgcolor }}
+    onClick={onClickHandler}
+    id={t.name}
   >
     {t.name}
   </div>) : ''
+
+  const onClickHandler = (event) => {
+    let timer;
+    clearTimeout(timer);
+    if (event.detail === 1) {
+      timer = setTimeout(() => {
+        console.log("SINGLE CLICK");
+      }, 500)
+    } else if (event.detail === 2) {
+      let id = event.target.id
+      common.forEach((task) => {
+        const { name, targetCategory } = task;
+        if ((name === id)) {
+          task = { ...task, category: targetCategory };
+          setStateForCategory(task.category, task, id)
+        }
+      });
+    }
+  }
 
   const reset = () => {
     setCommon([...json.data])

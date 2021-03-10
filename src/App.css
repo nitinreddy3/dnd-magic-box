@@ -38,7 +38,7 @@
   height: 150px;
   display: inline-block;
   background-color: #d5c9c9;
-  margin-right: 20px;
+  margin: 0 20px 20px 0;
   /* border-radius: 20px; */
 }
 
@@ -57,4 +57,5 @@
   /* width: 100px; */
   padding: 10px;
   /* border-radius: 5px; */
+  margin: 0 auto;
 }
