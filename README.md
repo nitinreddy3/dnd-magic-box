@@ -1,5 +1,14 @@
 # Getting Started with Drag and drop the boxes
 
+## Feature
+
+There are three categories 
+1. Common - Here all the elements are persisted
+2. Category A - User can drag and drop elements from "Common" category to this category but only the ones which starts with Category Id
+3. Category B - Same as explained for Category B 
+
+At the end a user can reset the list items which will go back to the initial state.
+
 ## Available Scripts
 
 In the project directory, you can run:
