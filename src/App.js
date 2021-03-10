@@ -63,9 +63,8 @@ function App() {
    */
   const getCategorizedTasks = (category) => category.length ? category.map(item => <span
     key={item.name}
-    onDragStart={(event) => onDragStartHandler(event, item.name)}
+    onDragStart={event => onDragStartHandler(event, item.name)}
     className="draggable"
-    // style={{ backgroundColor: item.bgcolor }}
     onClick={onClickHandler}
     id={item.name}
     draggable
